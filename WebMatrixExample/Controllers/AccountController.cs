@@ -59,6 +59,7 @@ namespace WebMatrixExample.Controllers
         public ActionResult Logout()
         {
             WebSecurity.Logout();
+            Session.Abandon();
             Response.Redirect("~/account/login");
             return View();
         }
